@@ -13,6 +13,8 @@ jobs:
     name: Sync latest commits from upstream repo
     runs-on: ubuntu-latest
     if: ${{ github.event.repository.fork }}
+    env:
+      TZ: Asia/Shanghai  # 设置时区为上海
 
     steps:
       # Step 1: run a standard checkout action
